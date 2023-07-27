@@ -1,9 +1,14 @@
-var InputNum1 = document.querySelector('#input1');
-var InputNum2 = document.querySelector('#input2');
-var SubmitButton = document.querySelector('button');
-function addNumbers(num1, num2) {
-    return num1 + num2;
+function addFunction(num1, num2, showResult, message) {
+    var result = num1 + num2;
+    if (showResult) {
+        console.log("".concat(message), (result));
+    }
+    else {
+        console.log("".concat(message), 'Not Equal');
+    }
 }
-SubmitButton === null || SubmitButton === void 0 ? void 0 : SubmitButton.addEventListener("click", function () {
-    console.log("the sum is ".concat(addNumbers(+InputNum1.value, +InputNum2.value)));
-});
+var number1 = 5;
+var number2 = 10;
+var showResult = true;
+var message = 'The sum is: ';
+(addFunction(number1, number2, showResult, message));
